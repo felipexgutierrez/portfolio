@@ -103,8 +103,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Archiv
 .sheet[data-grid="true"] {
   background-image:
     repeating-linear-gradient(0deg, transparent, transparent 47px, var(--gridline) 47px, var(--gridline) 48px),
-    repeating-linear-gradient(90deg, transparent, transparent 47px, var(--gridline) 47px, var(--gridline) 48px);
-  background-attachment: fixed; }
+    repeating-linear-gradient(90deg, transparent, transparent 47px, var(--gridline) 47px, var(--gridline) 48px); }
 
 /* simpler frame styles (Tweaks > Frame style) */
 .sheetframe:not([data-frame="Zone grid"]) { display: block; }

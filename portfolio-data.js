@@ -9,7 +9,7 @@ window.FELIPE = {
   linkedin: "felipexgutierrez",
   linkedinUrl: "https://www.linkedin.com/in/felipexgutierrez",
   // URL where this portfolio is hosted — the QR code on the CV points here. Replace after deploying.
-  portfolioUrl: "https://pipeguti16.github.io/portfolio",
+  portfolioUrl: "https://felipexgutierrez.github.io/portfolio",
   projects: [
     {
       id: "warman",
