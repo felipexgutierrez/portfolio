@@ -120,8 +120,8 @@ window.FELIPE = {
       detail: "General construction induction training: authorised to work on Australian construction sites." },
     { id: "firstaid", name: "First Aid Certificate", issuer: "Provide First Aid", status: "Held",
       detail: "Trained in emergency response and CPR; supports safety roles on team projects and site work." },
-    { id: "claude", name: "Anthropic Courses", issuer: "Claude completion certificates", status: "Held",
-      detail: "Completed Anthropic's Claude courses, applying AI tooling to engineering documentation and analysis workflows." },
+    { id: "matlab", name: "MATLAB Certification", issuer: "Planned (in progress)", status: "Planned",
+      detail: "Preparing for MATLAB certification to formalise programming, control and data-analysis proficiency." },
     { id: "sw", name: "SolidWorks Certification", issuer: "Planned (in progress)", status: "Planned",
       detail: "Preparing for SolidWorks certification to formalise CAD and simulation proficiency." }
   ],
