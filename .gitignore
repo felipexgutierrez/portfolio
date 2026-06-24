@@ -1,0 +1,11 @@
+# Local tooling / editor
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Heavy import/export baggage — not part of the published site
+Portfolio-handoff.zip
+*.zip
+portfolio/
+site/
