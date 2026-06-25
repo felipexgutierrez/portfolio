@@ -29,18 +29,18 @@ window.FELIPE = {
       photo: "warman robot: team build photo",
       hasPhoto: true,
       gallery: [
-        { src: "assets/warman/12-demo.png", title: "Demonstration day — Warman REEP track", note: "Ran the robot on the official competition track at the final demonstration." },
-        { src: "assets/warman/11-weighin.png", title: "Weigh-in — verifying the mass budget", note: "Checked the build against the competition mass limit on the bench scale." },
-        { src: "assets/warman/10-assembly.png", title: "Assembly — the integrated robot", note: "Brought the mechanical, electrical and software sub-systems together." },
-        { src: "assets/warman/09-electronics.png", title: "Integration — wiring the control system", note: "Mounted and wired the Arduino, motor drivers and sensors onto the chassis." },
-        { src: "assets/warman/08-brackets.png", title: "Fabrication — bent sheet-metal brackets", note: "Folded aluminium brackets in the workshop from the dimensioned drawings." },
-        { src: "assets/warman/07-printing.png", title: "Prototyping — 3D-printing custom mounts", note: "Printed motor and wheel mounts to test fit before final fabrication." },
-        { src: "assets/warman/06-drawing.png", title: "AS1100 engineering drawing", note: "Produced standard-compliant orthographic + isometric drawings for manufacture." },
-        { src: "assets/warman/05-fea.png", title: "FEA — structural stress & deflection study", note: "Validated the hand calcs with a finite-element stress check on the chassis." },
-        { src: "assets/warman/04-calcs.png", title: "Engineering analysis — chassis load hand calcs", note: "Hand-calculated reaction forces on the acrylic deck to size the structure." },
-        { src: "assets/warman/03-cad.png", title: "SolidWorks CAD — full chassis assembly", note: "Modelled the complete robot as a parametric assembly in SolidWorks 2025." },
-        { src: "assets/warman/02-matrix.png", title: "Concept selection — weighted decision matrix", note: "Scored drivetrains against cost, turning, weight & complexity to justify the choice." },
-        { src: "assets/warman/01-ideation.png", title: "Ideation — hand-sketched drivetrain & chassis concepts", note: "Generated and compared concepts before committing to CAD." }
+        { src: "assets/warman/12-demo.webp", title: "Demonstration day — Warman REEP track", note: "Ran the robot on the official competition track at the final demonstration." },
+        { src: "assets/warman/11-weighin.webp", title: "Weigh-in — verifying the mass budget", note: "Checked the build against the competition mass limit on the bench scale." },
+        { src: "assets/warman/10-assembly.webp", title: "Assembly — the integrated robot", note: "Brought the mechanical, electrical and software sub-systems together." },
+        { src: "assets/warman/09-electronics.webp", title: "Integration — wiring the control system", note: "Mounted and wired the Arduino, motor drivers and sensors onto the chassis." },
+        { src: "assets/warman/08-brackets.webp", title: "Fabrication — bent sheet-metal brackets", note: "Folded aluminium brackets in the workshop from the dimensioned drawings." },
+        { src: "assets/warman/07-printing.webp", title: "Prototyping — 3D-printing custom mounts", note: "Printed motor and wheel mounts to test fit before final fabrication." },
+        { src: "assets/warman/06-drawing.webp", title: "AS1100 engineering drawing", note: "Produced standard-compliant orthographic + isometric drawings for manufacture." },
+        { src: "assets/warman/05-fea.webp", title: "FEA — structural stress & deflection study", note: "Validated the hand calcs with a finite-element stress check on the chassis." },
+        { src: "assets/warman/04-calcs.webp", title: "Engineering analysis — chassis load hand calcs", note: "Hand-calculated reaction forces on the acrylic deck to size the structure." },
+        { src: "assets/warman/03-cad.webp", title: "SolidWorks CAD — full chassis assembly", note: "Modelled the complete robot as a parametric assembly in SolidWorks 2025." },
+        { src: "assets/warman/02-matrix.webp", title: "Concept selection — weighted decision matrix", note: "Scored drivetrains against cost, turning, weight & complexity to justify the choice." },
+        { src: "assets/warman/01-ideation.webp", title: "Ideation — hand-sketched drivetrain & chassis concepts", note: "Generated and compared concepts before committing to CAD." }
       ]
     },
     {
@@ -59,11 +59,11 @@ window.FELIPE = {
       photo: "industrial partner project",
       hasPhoto: false,
       gallery: [
-        { src: "assets/mott/01-banner.jpg", title: "UTS ENG SOC × Mott MacDonald", note: "The Industry Partner Project: a real client brief run with Mott MacDonald through the UTS Engineering Society." },
-        { src: "assets/mott/02-briefing.jpg", title: "Project briefing — the client problem", note: "Practising Mott MacDonald engineers set the brief and outlined the real-world problem to solve." },
-        { src: "assets/mott/03-workshop.jpg", title: "Team workshop — developing the solution", note: "Worked in a student team to research, ideate and build out a response to the brief." },
-        { src: "assets/mott/04-group.jpg", title: "Cohort showcase — final presentations", note: "Teams presented their solutions to the engineers and the wider cohort on showcase day." },
-        { src: "assets/mott/05-certificate.jpg", title: "Certificate of Participation", note: "Recognised by UTS ENG SOC and Mott MacDonald for completing the Industry Partner Project." }
+        { src: "assets/mott/01-banner.webp", title: "UTS ENG SOC × Mott MacDonald", note: "The Industry Partner Project: a real client brief run with Mott MacDonald through the UTS Engineering Society." },
+        { src: "assets/mott/02-briefing.webp", title: "Project briefing — the client problem", note: "Practising Mott MacDonald engineers set the brief and outlined the real-world problem to solve." },
+        { src: "assets/mott/03-workshop.webp", title: "Team workshop — developing the solution", note: "Worked in a student team to research, ideate and build out a response to the brief." },
+        { src: "assets/mott/04-group.webp", title: "Cohort showcase — final presentations", note: "Teams presented their solutions to the engineers and the wider cohort on showcase day." },
+        { src: "assets/mott/05-certificate.webp", title: "Certificate of Participation", note: "Recognised by UTS ENG SOC and Mott MacDonald for completing the Industry Partner Project." }
       ]
     },
     {
@@ -83,11 +83,11 @@ window.FELIPE = {
       photo: "CFD temperature plot / printed prototype",
       hasPhoto: true,
       gallery: [
-        { src: "assets/heatx/01-prototype.png", title: "3D-printed octagonal prototype", note: "The counter-flow octagonal heat exchanger printed in PETG, showing the double-pipe geometry and central octagonal core." },
-        { src: "assets/heatx/02-cutplot-iso.png", title: "CFD cut plot — temperature contours", note: "SolidWorks Flow Simulation cut plot of the full assembly at iteration 100, with counter-flowing hot and cold streams (293–330 K)." },
-        { src: "assets/heatx/03-temperature-section.png", title: "Temperature distribution — longitudinal section", note: "Section view of the fluid temperature field developing along the exchanger length, peaking at 317.95 K." },
-        { src: "assets/heatx/04-inlet-massflow.png", title: "Inlet boundary condition", note: "Annular inlet with a prescribed mass flow of 0.0665 kg/s applied to the cold stream." },
-        { src: "assets/heatx/05-avg-temp-iterations.png", title: "Convergence — average fluid temperature", note: "Goal plot of average fluid temperature converging to ~304 K over 100 iterations." }
+        { src: "assets/heatx/01-prototype.webp", title: "3D-printed octagonal prototype", note: "The counter-flow octagonal heat exchanger printed in PETG, showing the double-pipe geometry and central octagonal core." },
+        { src: "assets/heatx/02-cutplot-iso.webp", title: "CFD cut plot — temperature contours", note: "SolidWorks Flow Simulation cut plot of the full assembly at iteration 100, with counter-flowing hot and cold streams (293–330 K)." },
+        { src: "assets/heatx/03-temperature-section.webp", title: "Temperature distribution — longitudinal section", note: "Section view of the fluid temperature field developing along the exchanger length, peaking at 317.95 K." },
+        { src: "assets/heatx/04-inlet-massflow.webp", title: "Inlet boundary condition", note: "Annular inlet with a prescribed mass flow of 0.0665 kg/s applied to the cold stream." },
+        { src: "assets/heatx/05-avg-temp-iterations.webp", title: "Convergence — average fluid temperature", note: "Goal plot of average fluid temperature converging to ~304 K over 100 iterations." }
       ]
     },
     {
@@ -108,10 +108,10 @@ window.FELIPE = {
       photo: "turbine under wind-tunnel test",
       hasPhoto: true,
       gallery: [
-        { src: "assets/vawt/01-wind-tunnel.png", title: "Wind-tunnel test setup", note: "The assembled six-blade turbine mounted on its base inside the perspex wind tunnel, fan and anemometer in position for performance testing." },
-        { src: "assets/vawt/02-connector.png", title: "3D-printed PETG central connector", note: "Top-down view of a PETG connector joining the six galvanised steel blades to the 12mm aluminium shaft via bolted joints." },
-        { src: "assets/vawt/03-assembly-drawing.png", title: "Turbine assembly drawing", note: "SolidWorks assembly drawing: 12mm main shaft (×1), main central connector (×2) and blades (×6)." },
-        { src: "assets/vawt/04-fabrication.png", title: "Workshop fabrication", note: "Shaft clamped in a vice during assembly of the curved galvanised steel blades in the UTS workshop." }
+        { src: "assets/vawt/01-wind-tunnel.webp", title: "Wind-tunnel test setup", note: "The assembled six-blade turbine mounted on its base inside the perspex wind tunnel, fan and anemometer in position for performance testing." },
+        { src: "assets/vawt/02-connector.webp", title: "3D-printed PETG central connector", note: "Top-down view of a PETG connector joining the six galvanised steel blades to the 12mm aluminium shaft via bolted joints." },
+        { src: "assets/vawt/03-assembly-drawing.webp", title: "Turbine assembly drawing", note: "SolidWorks assembly drawing: 12mm main shaft (×1), main central connector (×2) and blades (×6)." },
+        { src: "assets/vawt/04-fabrication.webp", title: "Workshop fabrication", note: "Shaft clamped in a vice during assembly of the curved galvanised steel blades in the UTS workshop." }
       ]
     }
   ],
