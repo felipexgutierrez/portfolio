@@ -14,7 +14,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 function ProjectCard({ p }) {
   const [open, setOpen] = useState(false);
   return (
-    <article className="projwrap" data-comment-anchor={"proj-" + p.id}>
+    <article className="projwrap reveal" data-comment-anchor={"proj-" + p.id}>
       <div className={"projcard" + (p.gallery ? " has-gallery" : "")}>
         <div className="projbody">
           <div className="projcode">{p.code} · {p.date}</div>
@@ -48,7 +48,7 @@ function ProjectCard({ p }) {
 
 function CertCard({ c }) {
   return (
-    <div className="cert" data-comment-anchor={"cert-" + c.id}>
+    <div className="cert reveal" data-comment-anchor={"cert-" + c.id}>
       <h4>{c.name}</h4>
       <div className="certdetail">{c.detail}</div>
       <div className="certfoot">
@@ -67,6 +67,21 @@ function App() {
     const fn = (e) => setOsDark(e.matches);
     mq.addEventListener("change", fn);
     return () => mq.removeEventListener("change", fn);
+  }, []);
+  // Scroll-reveal: fade-and-rise each section/card into view as it's scrolled to.
+  React.useEffect(() => {
+    const els = document.querySelectorAll(".reveal");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      els.forEach(el => el.classList.add("in"));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
   }, []);
   const blueprint = t.theme === "Blueprint" || (t.theme === "System" && osDark);
   const accent = blueprint ? "#9cc6ff" : t.accent;
@@ -118,14 +133,14 @@ function App() {
         </header>
 
         <section id="projects" data-screen-label="Projects">
-          <div className="secthead">
+          <div className="secthead reveal">
             <span className="dwg">DWG 01</span><h2>Projects</h2><div className="rule"></div>
           </div>
           {D.projects.map(p => <ProjectCard p={p} key={p.id} />)}
         </section>
 
         <section id="certificates" data-screen-label="Certificates">
-          <div className="secthead">
+          <div className="secthead reveal">
             <span className="dwg">DWG 02</span><h2>Certificates</h2><div className="rule"></div>
           </div>
           <div className="certgrid">
@@ -134,10 +149,10 @@ function App() {
         </section>
 
         <section id="skills" data-screen-label="Skills & Experience">
-          <div className="secthead">
+          <div className="secthead reveal">
             <span className="dwg">DWG 03</span><h2>Skills &amp; Experience</h2><div className="rule"></div>
           </div>
-          <div className="twocol">
+          <div className="twocol reveal">
             <div>
               <div className="h3small">TECHNICAL SKILLS</div>
               {D.skills.map(s => (
