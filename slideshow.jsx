@@ -51,6 +51,11 @@ function Lightbox({ items, index, setIndex, onClose }) {
 function Slideshow({ items, code }) {
   const [index, setIndex] = React.useState(0);
   const [box, setBox] = React.useState(false);
+  // Preload every gallery image up-front (they're small WebPs now) so advancing
+  // never waits on a network fetch or a first-time decode.
+  React.useEffect(() => {
+    items.forEach((it) => { const im = new Image(); im.src = it.src; });
+  }, [items]);
   const n = items.length;
   if (!n) return null;
   const major = ((code || "").match(/\d+/) || ["01"])[0];
@@ -66,7 +71,7 @@ function Slideshow({ items, code }) {
     <div className="ss" data-comment-anchor="warman-gallery">
       <div className="ss-stage" {...swipe}>
         {stack.slice().reverse().map(({ off, it }) => (
-          <div key={off} className={"ss-card pos-" + off} onClick={() => off === 0 ? setBox(true) : go(off)}>
+          <div key={it.src} className={"ss-card pos-" + off} onClick={() => off === 0 ? setBox(true) : go(off)}>
             <div className="ss-mat">
               <img src={it.src} alt={it.title} draggable="false" />
             </div>
