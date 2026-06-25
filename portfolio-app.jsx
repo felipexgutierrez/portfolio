@@ -112,12 +112,12 @@ function App() {
       </nav>
 
       <div className="sheetframe" data-frame={t.frame}>
-        {t.frame === "Zone grid" && <>
+        {t.frame === "Zone grid" && <React.Fragment>
           <div className="zcorner tl"></div>
           <div className="zone top">{Array.from({ length: 12 }, (_, i) => <span key={i}>{i + 1}</span>)}</div>
           <div className="zcorner tr"></div>
           <div className="zone left">{"ABCDEFGHIJKLMNOPQR".split("").map(l => <span key={l}>{l}</span>)}</div>
-        </>}
+        </React.Fragment>}
 
         <div className="sheet" data-grid={t.grid ? "true" : "false"}>
         <header className="hero" data-screen-label="Hero">
@@ -197,12 +197,12 @@ function App() {
         </footer>
         </div>
 
-        {t.frame === "Zone grid" && <>
+        {t.frame === "Zone grid" && <React.Fragment>
           <div className="zone right">{"ABCDEFGHIJKLMNOPQR".split("").map(l => <span key={l}>{l}</span>)}</div>
           <div className="zcorner bl"></div>
           <div className="zone bottom">{Array.from({ length: 12 }, (_, i) => <span key={i}>{i + 1}</span>)}</div>
           <div className="zcorner br"></div>
-        </>}
+        </React.Fragment>}
       </div>
 
       <TweaksPanel>

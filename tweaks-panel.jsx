@@ -178,7 +178,7 @@ function useTweaks(defaults) {
   const setTweak = React.useCallback((keyOrEdits, val) => {
     const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
       ? keyOrEdits : { [keyOrEdits]: val };
-    setValues((prev) => ({ ...prev, ...edits }));
+    setValues((prev) => Object.assign({}, prev, edits));
     window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
     // Same-window signal so in-page listeners (deck-stage rail thumbnails)
     // can react — the parent message only reaches the host, not peers.
@@ -228,7 +228,7 @@ function TweaksPanel({ title = 'Tweaks', children }) {
 
   React.useEffect(() => {
     const onMsg = (e) => {
-      const t = e?.data?.type;
+      const t = e && e.data && e.data.type;
       if (t === '__activate_edit_mode') setOpen(true);
       else if (t === '__deactivate_edit_mode') setOpen(false);
     };
@@ -266,7 +266,7 @@ function TweaksPanel({ title = 'Tweaks', children }) {
 
   if (!open) return null;
   return (
-    <>
+    <React.Fragment>
       <style>{__TWEAKS_STYLE}</style>
       <div ref={dragRef} className="twk-panel" data-omelette-chrome=""
            style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
@@ -280,7 +280,7 @@ function TweaksPanel({ title = 'Tweaks', children }) {
           {children}
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }
 
@@ -288,10 +288,10 @@ function TweaksPanel({ title = 'Tweaks', children }) {
 
 function TweakSection({ label, children }) {
   return (
-    <>
+    <React.Fragment>
       <div className="twk-sect">{label}</div>
       {children}
-    </>
+    </React.Fragment>
   );
 }
 
@@ -344,7 +344,7 @@ function TweakRadio({ label, value, options, onChange }) {
   // back to a dropdown rather than wrap.
   const labelLen = (o) => String(typeof o === 'object' ? o.label : o).length;
   const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
-  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] ?? 0);
+  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] || 0);
   if (!fitsAsSegments) {
     // <select> emits strings — map back to the original option value so the
     // fallback stays type-preserving (numbers, booleans) like the segment path.
