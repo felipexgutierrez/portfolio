@@ -192,7 +192,7 @@ function App() {
           <div className="links">
             <a href={D.linkedinUrl} target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
             <a href={"mailto:" + D.email} onClick={copyEmail} className={copied ? "copied" : ""}>{copied ? "✓ EMAIL COPIED — PASTE IT" : "COPY EMAIL"}</a>
-            <a href={window.RESUME_DOCX_URL || "uploads/Felipe_Gutierrez_Resume.docx"} download="Felipe_Gutierrez_Resume.docx">DOWNLOAD CV</a>
+            <a href={window.RESUME_DOCX_URL || "uploads/Felipe_Gutierrez_Resume.pdf"} download="Felipe_Gutierrez_Resume.pdf">DOWNLOAD CV</a>
           </div>
         </footer>
         </div>

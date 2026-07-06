@@ -535,7 +535,7 @@ function App() {
             ),
             React.createElement(
               "a",
-              { href: window.RESUME_DOCX_URL || "uploads/Felipe_Gutierrez_Resume.docx", download: "Felipe_Gutierrez_Resume.docx" },
+              { href: window.RESUME_DOCX_URL || "uploads/Felipe_Gutierrez_Resume.pdf", download: "Felipe_Gutierrez_Resume.pdf" },
               "DOWNLOAD CV"
             )
           )
