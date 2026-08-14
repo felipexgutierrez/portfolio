@@ -120,6 +120,8 @@ window.FELIPE = {
       detail: "General construction induction training: authorised to work on Australian construction sites." },
     { id: "firstaid", name: "First Aid Certificate", issuer: "Provide First Aid", status: "Held",
       detail: "Trained in emergency response and CPR; supports safety roles on team projects and site work." },
+    { id: "ausimm", name: "AusIMM Student Member", issuer: "The Australasian Institute of Mining and Metallurgy", status: "Held",
+      detail: "Student member (SAusIMM, 2026) of AusIMM — the professional body for the resources sector — with access to industry events, publications and professional networks." },
     { id: "matlab", name: "MATLAB Certification", issuer: "Planned (in progress)", status: "Planned",
       detail: "Preparing for MATLAB certification to formalise programming, control and data-analysis proficiency." },
     { id: "sw", name: "SolidWorks Certification", issuer: "Planned (in progress)", status: "Planned",
