@@ -109,7 +109,7 @@ function CertCard(_ref2) {
 
   return React.createElement(
     "div",
-    { className: "cert reveal", "data-comment-anchor": "cert-" + c.id },
+    { className: "cert", "data-comment-anchor": "cert-" + c.id },
     React.createElement(
       "h4",
       null,
@@ -382,10 +382,32 @@ function App() {
           ),
           React.createElement(
             "div",
-            { className: "certgrid" },
-            D.certificates.map(function (c) {
-              return React.createElement(CertCard, { c: c, key: c.id });
-            })
+            { className: "cbelt" },
+            React.createElement(
+              "div",
+              { className: "conveyor" },
+              React.createElement(
+                "div",
+                { className: "conveyor-track" },
+                D.certificates.map(function (c) {
+                  return React.createElement(CertCard, { c: c, key: c.id });
+                }),
+                D.certificates.map(function (c) {
+                  return React.createElement(CertCard, { c: c, key: c.id + "-b" });
+                })
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "beltwrap", "aria-hidden": "true" },
+              React.createElement("span", { className: "roller" }),
+              React.createElement(
+                "div",
+                { className: "belt" },
+                React.createElement("div", { className: "belt-tread" })
+              ),
+              React.createElement("span", { className: "roller" })
+            )
           )
         ),
         React.createElement(

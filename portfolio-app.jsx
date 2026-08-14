@@ -48,7 +48,7 @@ function ProjectCard({ p }) {
 
 function CertCard({ c }) {
   return (
-    <div className="cert reveal" data-comment-anchor={"cert-" + c.id}>
+    <div className="cert" data-comment-anchor={"cert-" + c.id}>
       <h4>{c.name}</h4>
       <div className="certdetail">{c.detail}</div>
       <div className="certfoot">
@@ -143,8 +143,18 @@ function App() {
           <div className="secthead reveal">
             <span className="dwg">DWG 02</span><h2>Certificates</h2><div className="rule"></div>
           </div>
-          <div className="certgrid">
-            {D.certificates.map(c => <CertCard c={c} key={c.id} />)}
+          <div className="cbelt">
+            <div className="conveyor">
+              <div className="conveyor-track">
+                {D.certificates.map(c => <CertCard c={c} key={c.id} />)}
+                {D.certificates.map(c => <CertCard c={c} key={c.id + "-b"} />)}
+              </div>
+            </div>
+            <div className="beltwrap" aria-hidden="true">
+              <span className="roller"></span>
+              <div className="belt"><div className="belt-tread"></div></div>
+              <span className="roller"></span>
+            </div>
           </div>
         </section>
 

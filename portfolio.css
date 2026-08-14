@@ -339,3 +339,37 @@ html.reveal-ready .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html.reveal-ready .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ===== certificates conveyor belt ===== */
+.cbelt { margin-top: 26px; }
+.conveyor { margin: 0 clamp(32px, 5vw, 72px); overflow: hidden; position: relative;
+  border: 1px solid var(--ink); background: var(--card);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.conveyor-track { display: flex; width: max-content; animation: conveyor 42s linear infinite; }
+.conveyor .cert { flex: 0 0 300px; width: 300px; border-right: 1px solid var(--line); border-bottom: none; }
+@keyframes conveyor { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* belt + rollers under the cards */
+.beltwrap { margin: 12px clamp(32px, 5vw, 72px) 0; display: flex; align-items: center; gap: 10px; }
+.beltwrap .roller { flex: 0 0 auto; width: 30px; height: 30px; border: 2px solid var(--ink); border-radius: 50%;
+  background: var(--card);
+  background-image: repeating-conic-gradient(from 0deg, var(--ink) 0 3deg, transparent 3deg 45deg);
+  animation: roll 2.6s linear infinite; }
+.belt { flex: 1; height: 15px; border: 1.5px solid var(--ink); border-radius: 8px; overflow: hidden; background: var(--paper); }
+.belt-tread { height: 100%; width: 200%;
+  background: repeating-linear-gradient(90deg, var(--gridline) 0 12px, transparent 12px 24px);
+  animation: conveyor 5.5s linear infinite; }
+@keyframes roll { to { transform: rotate(360deg); } }
+/* pause everything when the reader hovers to inspect a card */
+.cbelt:hover .conveyor-track,
+.cbelt:hover .belt-tread,
+.cbelt:hover .roller { animation-play-state: paused; }
+
+@media (max-width: 640px) {
+  .conveyor .cert { flex-basis: 250px; width: 250px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .conveyor-track, .belt-tread, .roller { animation: none; }
+  .conveyor { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+}
