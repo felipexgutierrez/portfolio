@@ -121,6 +121,7 @@ function App() {
 
         <div className="sheet" data-grid={t.grid ? "true" : "false"}>
         <header className="hero" data-screen-label="Hero">
+          <img className="herobadge" src="assets/ausimm-badge.webp" alt="AusIMM Student Member 2026 (SAusIMM)" width="76" height="76" />
           <div className="sub">MECHANICAL ENGINEERING (HONOURS) · UTS · SYDNEY</div>
           <h1 style={{ fontSize: t.heroScale + "px" }}>Felipe<br />Gutierrez</h1>
           <p className="tag">{D.tagline}</p>

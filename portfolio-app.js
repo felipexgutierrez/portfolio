@@ -278,6 +278,7 @@ function App() {
         React.createElement(
           "header",
           { className: "hero", "data-screen-label": "Hero" },
+          React.createElement("img", { className: "herobadge", src: "assets/ausimm-badge.webp", alt: "AusIMM Student Member 2026 (SAusIMM)", width: "76", height: "76" }),
           React.createElement(
             "div",
             { className: "sub" },
