@@ -362,10 +362,13 @@ html.reveal-ready .reveal.in { opacity: 1; transform: none; }
   background: repeating-linear-gradient(90deg, var(--gridline) 0 12px, transparent 12px 24px);
   animation: conveyor 5.5s linear infinite; }
 @keyframes roll { to { transform: rotate(360deg); } }
-/* pause everything when the reader hovers to inspect a card */
-.cbelt:hover .conveyor-track,
-.cbelt:hover .belt-tread,
-.cbelt:hover .roller { animation-play-state: paused; }
+/* pause on hover to inspect a card — only on real mouse devices, so a tap on a
+   touchscreen doesn't leave the belt stuck in a "sticky hover" paused state */
+@media (hover: hover) and (pointer: fine) {
+  .cbelt:hover .conveyor-track,
+  .cbelt:hover .belt-tread,
+  .cbelt:hover .roller { animation-play-state: paused; }
+}
 
 @media (max-width: 640px) {
   .conveyor .cert { flex-basis: 250px; width: 250px; }
